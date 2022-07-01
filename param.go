@@ -112,7 +112,7 @@ type AndroidPayload struct {
 		// SDK默认声音文件不存在,则使用系统默认Notification提示音
 		Sound string `json:"sound,omitempty"`
 
-		BuilderId   string `json:"builder_id,omitempty"`   // 可选,默认为0,用于标识该通知采用的样式,使用该参数时,开发者必须在SDK里面实现自定义通知栏样式
+		BuilderId   int    `json:"builder_id,omitempty"`   // 可选,默认为0,用于标识该通知采用的样式,使用该参数时,开发者必须在SDK里面实现自定义通知栏样式
 		PlayVibrate string `json:"play_vibrate,omitempty"` // 可选,收到通知是否震动,默认为"true"
 		PlayLights  string `json:"play_lights,omitempty"`  // 可选,收到通知是否闪灯,默认为"true"
 		PlaySound   string `json:"play_sound,omitempty"`   // 可选,收到通知是否发出声音,默认为"true"
